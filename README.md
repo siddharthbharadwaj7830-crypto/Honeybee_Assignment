@@ -1,102 +1,167 @@
 # 🐝 Honeybee Business Listings Dashboard
 
-## 📌 Project Overview
+A Full Stack Business Listings Dashboard developed as part of the **Honeybee Digital Python Internship Assignment**.
 
-This project is a Business Listings Dashboard developed as part of the Honeybee Digital Python Internship Assignment.
-
-The application stores business listings in a MySQL database, provides FastAPI APIs, and displays dashboard reports using a React frontend.
+The application uses **React**, **FastAPI**, **SQLAlchemy**, and **MySQL** to manage business listings and display dashboard analytics.
 
 ---
 
-## 🚀 Tech Stack
+# 📌 Project Overview
 
-### Frontend
+This project allows users to manage business listings through a web-based dashboard.
+
+The application provides REST APIs using FastAPI, stores data in MySQL, and displays interactive reports and charts using React.
+
+The project demonstrates:
+
+- Full Stack Development
+- REST API Development
+- CRUD Operations
+- Database Management
+- Dashboard Analytics
+- Search & Filtering
+- Git & GitHub Workflow
+
+---
+
+# 🚀 Tech Stack
+
+## Frontend
+
 - React.js
+- Vite
+- Axios
 - Recharts
+- HTML
+- CSS
 
-### Backend
+## Backend
+
+- Python
 - FastAPI
 - SQLAlchemy
+- Pydantic
+- Uvicorn
 
-### Database
+## Database
+
 - MySQL
 
-### Language
-- Python
+## Development Tools
+
+- Visual Studio Code
+- Git
+- GitHub
+- MySQL Workbench
 
 ---
 
-## 📊 Features
+# ✨ Features
+
+### Business Management
 
 - Add New Business Listing
-- View All Listings
+- View All Business Listings
+- Update Business Listing
+- Delete Business Listing
+
+### Search & Filter
+
 - Search by City
 - Search by Category
-- Update Listing
-- Delete Listing
-- Bulk Insert 500 Business Listings
-- Dashboard Cards
-- City Wise Business Count
-- Category Wise Business Count
-- Source Wise Business Count
+
+### Dashboard
+
+- Total Business Listings
+- City Wise Report
+- Category Wise Report
+- Source Wise Report
 - Bar Chart
 - Pie Chart
 
+### Database
+
+- Bulk Insert Business Listings
+- SQL Backup Included
+
 ---
 
-## 📁 Project Structure
+# 📂 Project Structure
 
-```
+```text
 Honeybee_Assignment/
 │
 ├── backend/
-│   ├── main.py
+│   ├── business_listings.csv
 │   ├── crud.py
-│   ├── models.py
-│   ├── schemas.py
 │   ├── database.py
 │   ├── generate_data.py
+│   ├── main.py
+│   ├── models.py
+│   └── schemas.py
 │
 ├── frontend/
+│   ├── public/
 │   ├── src/
+│   ├── .gitignore
+│   ├── index.html
 │   ├── package.json
+│   ├── package-lock.json
+│   └── vite.config.js
 │
+├── .gitignore
+├── honeybee_db.sql
+├── start_project.bat
 └── README.md
 ```
 
+> Note: Local folders such as `venv`, `node_modules`, and `__pycache__` are intentionally excluded because they are generated automatically and are not part of the source code.
+
 ---
 
-## ⚙️ Backend Setup
+# ⚙️ Backend Setup
 
 ```bash
 cd backend
 
-pip install fastapi
-pip install uvicorn
-pip install sqlalchemy
-pip install pymysql
-pip install faker
+venv\Scripts\activate
 
 uvicorn main:app --reload
 ```
 
+Backend URL
+
+```
+http://127.0.0.1:8000
+```
+
+Swagger Documentation
+
+```
+http://127.0.0.1:8000/docs
+```
+
 ---
 
-## ⚙️ Frontend Setup
+# ⚙️ Frontend Setup
 
 ```bash
 cd frontend
 
 npm install
 
-npm install recharts
-
 npm run dev
+```
+
+Frontend URL
+
+```
+http://localhost:5173
 ```
 
 ---
 
-## 📌 API Endpoints
+# 📡 API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -104,20 +169,28 @@ npm run dev
 | POST | /listings | Add Listing |
 | PUT | /listings/{id} | Update Listing |
 | DELETE | /listings/{id} | Delete Listing |
-| POST | /bulk-insert | Bulk Insert Data |
-| GET | /dashboard/city | City Report |
-| GET | /dashboard/category | Category Report |
-| GET | /dashboard/source | Source Report |
+| POST | /bulk-insert | Bulk Insert Sample Data |
+| GET | /dashboard/city | City Wise Report |
+| GET | /dashboard/category | Category Wise Report |
+| GET | /dashboard/source | Source Wise Report |
 
 ---
 
-## 📊 Database
+# 🗄️ Database
 
-Table Name:
+**Database Name**
 
+```
+honeybee_db
+```
+
+**Table Name**
+
+```
 listing_master
+```
 
-Fields:
+**Fields**
 
 - id
 - business_name
@@ -128,26 +201,75 @@ Fields:
 - source
 - created_at
 
----
+**Current Records**
 
-## 📌 Sample Data
-
-Due to scraping restrictions and website policies, realistic sample business listings were generated using Python Faker.
-
-The generated data was imported into MySQL using the Bulk Insert API.
+```
+502 Business Listings
+```
 
 ---
 
-## 🚀 Future Improvements
+# 📊 Dashboard Modules
+
+- Dashboard Cards
+- Business Listing Table
+- Search Filters
+- City Wise Analytics
+- Category Wise Analytics
+- Source Wise Analytics
+- Bar Chart
+- Pie Chart
+
+---
+
+# 📦 SQL Backup
+
+Database backup file included:
+
+```
+honeybee_db.sql
+```
+
+This file can be imported directly into MySQL Workbench.
+
+---
+
+# 🧪 Testing
+
+Successfully Tested:
+
+- CRUD Operations
+- FastAPI APIs
+- Swagger Documentation
+- React Dashboard
+- Database Connectivity
+- Search Functionality
+- Charts
+- Bulk Insert
+- GitHub Repository
+
+---
+
+# 🚀 Future Improvements
 
 - User Authentication
-- Export Reports
 - Pagination
+- Export Reports (Excel/PDF)
 - Advanced Filters
-- Live Dashboard
+- Dashboard Enhancements
 
 ---
 
-## 👨‍💻 Developed By
+# 👨‍💻 Developed By
 
-Siddharth Bharadwaj
+**Siddharth Bharadwaj**
+
+Honeybee Digital Python Internship Assignment
+
+---
+
+# ⭐ Thank You
+
+Thank you for reviewing this project.
+
+Feedback and suggestions are always welcome.
